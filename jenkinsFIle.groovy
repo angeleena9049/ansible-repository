@@ -12,7 +12,7 @@ pipeline{
         stage("Init"){
             steps{
                 script{
-                    sh "This is the test pipeline for Ansible"
+                    echo "This is the test pipeline for Ansible"
                 }
             }
         }
