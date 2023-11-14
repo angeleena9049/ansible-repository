@@ -20,6 +20,7 @@ pipeline{
         stage("Ansible Dry Run"){
             steps{
                 script{
+                    sh "which ansible-playbook"
                    sh " ansible-playbook -i inventory playbook.yml --check --diff "
                 }
             }
