@@ -1,0 +1,18 @@
+---
+# tasks file for test
+- name: Test ansible
+  apt:
+     upgrade: yes
+
+- name: Install Nginx
+  apt:
+      name: nginx
+      state: present
+  when: ansible_os_family == 'Debian'  # Use 'yum' for Red Hat-based systems
+
+- name: Start Nginx service
+  service:
+        name: nginx
+        state: started
+  when: ansible_os_family == 'Debian'  # U
+      
