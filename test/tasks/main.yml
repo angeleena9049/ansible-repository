@@ -1,0 +1,15 @@
+---
+# tasks file for test
+- name : Test
+  apt:
+   upgrade: yes
+
+- name : Install nginz
+  apt:
+    name : nginx
+    state : present
+
+- name : Start nginx
+  service:
+    name : nginx
+    state : started
