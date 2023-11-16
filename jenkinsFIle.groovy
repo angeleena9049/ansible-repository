@@ -12,7 +12,7 @@ pipeline{
         stage("Init"){
             steps{
                 script{
-                    sh "This is the test pipeline for Ansible"
+                    echo "This is the test pipeline for Ansible"
                 }
             }
         }
@@ -20,7 +20,8 @@ pipeline{
         stage("Ansible Dry Run"){
             steps{
                 script{
-                    sh "ansible-playbook -i inventory playbook.yml --check --diff"
+                    sh "which ansible-playbook"
+                   sh " ansible-playbook -i inventory playbook.yml --check --diff "
                 }
             }
         }
