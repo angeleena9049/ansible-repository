@@ -5,7 +5,7 @@ pipeline{
             steps {
                 // Clone the public Git repository
                 script {
-                    git url: 'https://github.com/angeleena9049/ansible-repository.git', branch: 'master'
+                    git url: 'https://github.com/angeleena9049/ansible-repository.git', branch: 'main'
                 }
             }
         }
