@@ -1,11 +1,11 @@
 ---
 # tasks file for test
 - name : Test
-  apt:
+  yum:
    upgrade: yes
 
 - name : Install nginz
-  apt:
+  yum:
     name : nginx
     state : present
 
